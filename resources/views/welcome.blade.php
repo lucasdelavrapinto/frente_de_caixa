@@ -257,7 +257,7 @@
         <div class="card">
             <h5 class="card-header h5">Resumo da Venda</h5>
             <div class="card-body " align="right">
-                <p class="valor2">R$ 300,00</p>
+                <p class="valor2" id="resumo_da_venda"></p>
                 <hr>
                 <a href="#!" class="btn btn-primary">Concluir Venda</a>
             </div>
@@ -312,6 +312,8 @@
           $("#input_desconto").val("");
           $("#input_valor_unitario").val("");
           $("#input_sub_total").val("");
+          var valor = 0;
+          $("#resumo_da_venda").html("R$ "+formatarPreco(valor));
         }
         resetCampos();
 
@@ -417,14 +419,29 @@
             sub_total: produto.quantidade * produto.vlr_unit
           }
           carrinho.push(meuproduto);
-          console.log(carrinho);
+          // console.log(carrinho);
           resetCampos();
           $("#input_produtos").focus();
         }
 
         $("#btn_inserir_produto").click(function (){
           saveCarrinho();
+          getSubTotalfromArray();
         });
+
+        function getSubTotalfromArray(){
+          var valor = 0;
+
+          for (let i=0; i < carrinho.length; i++) {
+            const element = carrinho[i];
+            valor = valor + element.sub_total;
+          }
+
+          // return valor;
+          // console.log(valor);
+          $("#resumo_da_venda").html("R$ "+formatarPreco(valor));
+
+        }
 
     });
 
