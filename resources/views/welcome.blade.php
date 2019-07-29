@@ -32,7 +32,7 @@
         padding: 20px;
     }
     .valor2{
-        font: 39px poppins;
+        font: 31px poppins;
     }
     .my-custom-scrollbar {
         position: relative;
@@ -225,30 +225,9 @@
           <div class="card">
             <div class="card-body">
                 <div class="table-wrapper-scroll-y my-custom-scrollbar">
-                    <table class="table table-hover">
-                    <thead>
-                        <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Descrição</th>
-                        <th scope="col">Qtde</th>
-                        <th scope="col">Preço Unit</th>
-                        <th scope="col">Sub Total</th>
-                        <th scope="col">Opções</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                            <td><button type="button" class="btn btn-danger btn-sm">Deletar</button></td>
-                        </tr>
-
-
-
-                    </tbody>
+                    <table class="table table-hover" id="myTable">
+                      <thead></thead>
+                      <tbody></tbody>
                     </table>
                 </div>
             </div>
@@ -427,6 +406,7 @@
         $("#btn_inserir_produto").click(function (){
           saveCarrinho();
           getSubTotalfromArray();
+          createTable();
         });
 
         function getSubTotalfromArray(){
@@ -442,6 +422,27 @@
           $("#resumo_da_venda").html("R$ "+formatarPreco(valor));
 
         }
+
+        function createTable(){
+          var html = '<table>';
+          html += '<tr>';
+          for( var j in carrinho[0] ) {
+            html += '<th>' + j + '</th>';
+          }
+          html +='<th>opções</th>';
+          html += '</tr>';
+          for( var i = 0; i < carrinho.length; i++) {
+            html += '<tr>';
+            for( var j in carrinho[i] ) {
+              html += '<td>' + carrinho[i][j] + '</td>';
+            }
+            html += '<td><button type="button" class="btn btn-danger btn-sm"> Deletar</button></td>'
+            html += '</tr>';
+
+          }
+          html += '</table>';
+          document.getElementById('myTable').innerHTML = html;
+        };
 
     });
 
