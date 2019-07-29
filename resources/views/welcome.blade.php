@@ -36,7 +36,7 @@
     }
     .my-custom-scrollbar {
         position: relative;
-        height: 400px;
+        height: 350px;
         overflow: auto;
     }
         .table-wrapper-scroll-y {
@@ -148,14 +148,6 @@
             <span><button type="button" class="btn btn-indigo">Clientes (F3)</button></span>
             <span><button type="button" class="btn btn-indigo">Pagamentos (F4)</button></span>
           </h4>
-
-          <form class="d-flex justify-content-center">
-            <!-- Default input -->
-            <input type="search" placeholder="Buscar Venda" aria-label="Search" class="form-control">
-            <button class="btn btn-primary btn-sm my-0 p" type="submit">
-              <i class="fas fa-search"></i>
-            </button>
-          </form>
         </div>
 
       </div>
@@ -170,7 +162,7 @@
             <div class="card-body">
                 <div class="row col-md-12">
                     <label for="">Produto</label>
-                    <input type="text" id="input_produtos" autocomplete="off" name="input_produtos" class="form-control" placeholder="Pesquisar código do produto" autofocus>
+                    <input type="text" id="input_produtos" autocomplete="off" name="input_produtos" class="form-control" placeholder="Pesquisar código do produto">
                 </div>
                 <br>
                 <div class="row">
@@ -265,21 +257,24 @@
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0-rc.2/jquery-ui.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+  <!-- biblioteca para adicionar atalho as teclas -->
+  <script src="js/shortcut.js"></script>
+  <!-- atalhos criados -->
+  <script src="js/keyboard.js"></script>
 
   <!-- Initializations -->
   <script type="text/javascript">
-    // Animations initialization
-    // new WOW().init();
-
     $("#btn_inserir_produto").hide();
 
-    var data = [
-        {label:"HTML", id:1, preco:49.90},
-        {label:"CSS", id:2, preco:19.90},
-        {label:"Laravel", id:3, preco:9.90},
-        {label:"SQL", id:4, preco:1499.00},
-        {label:"PHP", id:5, preco:2149.90},
-    ];
+    // var data = [
+    //     {label:"HTML", id:1, preco:49.90},
+    //     {label:"CSS", id:2, preco:19.90},
+    //     {label:"Laravel", id:3, preco:9.90},
+    //     {label:"SQL", id:4, preco:1499.00},
+    //     {label:"PHP", id:5, preco:2149.90},
+    // ];
 
   </script>
 
