@@ -5,6 +5,8 @@
 ## About
 Frente de Caixa feito com Laravel 5.6, Javascript e Jquery.
 
+OBS: Atualizado para: 7.30
+
 ##
 ![FrenteDeCaixa](https://i.imgur.com/GHoUdgd.png)
 
