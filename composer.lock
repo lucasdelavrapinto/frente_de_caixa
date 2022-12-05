@@ -1441,16 +1441,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.1.10",
+            "version": "1.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "3239285c825c152bcc315fe0e87d6b55f5972ed1"
+                "reference": "627be7fcde84c71aa0f15097fcf48fd5f2be5287"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/3239285c825c152bcc315fe0e87d6b55f5972ed1",
-                "reference": "3239285c825c152bcc315fe0e87d6b55f5972ed1",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/627be7fcde84c71aa0f15097fcf48fd5f2be5287",
+                "reference": "627be7fcde84c71aa0f15097fcf48fd5f2be5287",
                 "shasum": ""
             },
             "require": {
@@ -1531,20 +1531,20 @@
                     "type": "other"
                 }
             ],
-            "time": "2022-10-04T09:16:37+00:00"
+            "time": "2021-11-21T11:04:36+00:00"
         },
         {
             "name": "league/mime-type-detection",
-            "version": "1.11.0",
+            "version": "1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/mime-type-detection.git",
-                "reference": "ff6248ea87a9f116e78edd6002e39e5128a0d4dd"
+                "reference": "aa70e813a6ad3d1558fc927863d47309b4c23e69"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/ff6248ea87a9f116e78edd6002e39e5128a0d4dd",
-                "reference": "ff6248ea87a9f116e78edd6002e39e5128a0d4dd",
+                "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/aa70e813a6ad3d1558fc927863d47309b4c23e69",
+                "reference": "aa70e813a6ad3d1558fc927863d47309b4c23e69",
                 "shasum": ""
             },
             "require": {
@@ -7237,6 +7237,7 @@
                     "type": "github"
                 }
             ],
+            "abandoned": true,
             "time": "2020-11-30T07:30:19+00:00"
         },
         {
